@@ -6,6 +6,27 @@ Real-time audio visualizer built with React, Web Audio API, and Canvas. Drop in 
 
 ---
 
+## Preview
+
+![Audio Visualizer UI](screenshots/idle.png)
+
+---
+
+## Features
+
+- **Drag & drop** any audio file (MP3, WAV, FLAC, M4A) — or click to browse
+- **5 visual modes:**
+  - **Bars** — mirrored frequency bars that grow from the center, colored teal → cyan by frequency
+  - **Wave** — double-pass neon waveform with bloom glow
+  - **Hybrid** — bars + wave layered with ambient particles in the background
+  - **Pulse** — bass-reactive expanding rings with a breathing center orb
+  - **Particles** — slow ambient drift, teal → violet aurora palette, frequency-reactive color and size
+- Full transport controls: play/pause, seek, volume, restart
+- Retina/HiDPI canvas rendering
+- Mobile-friendly layout
+
+---
+
 ## Requirements
 
 Before you start, make sure you have the following installed:
@@ -44,7 +65,11 @@ npm run dev
 
 **4. Open your browser**
 
-Go to [http://localhost:5173](http://localhost:5173) — you should see the visualizer. Drop any audio file onto the page to get started.
+Go to [http://localhost:5173](http://localhost:5173) — you should see the visualizer.
+
+![Drop zone](screenshots/dropzone.png)
+
+Drop any audio file onto the page, or click the drop zone to browse for a file.
 
 ---
 
