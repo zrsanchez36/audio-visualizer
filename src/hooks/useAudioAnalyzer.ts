@@ -14,8 +14,8 @@ export function useAudioAnalyzer(): UseAudioAnalyzerReturn {
   const analyserRef = useRef<AnalyserNode | null>(null)
   const sourceRef   = useRef<MediaElementAudioSourceNode | null>(null)
   const connectedEl = useRef<HTMLAudioElement | null>(null)
-  const freqBuf     = useRef<Uint8Array | null>(null)
-  const timeBuf     = useRef<Uint8Array | null>(null)
+  const freqBuf     = useRef<Uint8Array<ArrayBuffer> | null>(null)
+  const timeBuf     = useRef<Uint8Array<ArrayBuffer> | null>(null)
 
   const connectAudio = useCallback((audio: HTMLAudioElement) => {
     if (connectedEl.current === audio && analyserRef.current) return

@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill="none">
+  <defs>
+    <clipPath id="frameClip">
+      <rect x="72" y="72" width="880" height="880" rx="208"/>
+    </clipPath>
+    <linearGradient id="bg" x1="168" y1="120" x2="856" y2="928" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#121A31"/>
+      <stop offset="0.48" stop-color="#101524"/>
+      <stop offset="1" stop-color="#09101B"/>
+    </linearGradient>
+    <radialGradient id="aura" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(512 470) rotate(90) scale(288)">
+      <stop offset="0" stop-color="#59F0E6" stop-opacity="0.34"/>
+      <stop offset="0.48" stop-color="#2DC8BE" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#2DC8BE" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="cornerGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(782 212) rotate(136.5) scale(322 288)">
+      <stop offset="0" stop-color="#7A80FF" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#7A80FF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="barFill" x1="512" y1="286" x2="512" y2="738" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#89FBFF"/>
+      <stop offset="0.45" stop-color="#5AEDE0"/>
+      <stop offset="1" stop-color="#22BDB2"/>
+    </linearGradient>
+    <linearGradient id="waveStroke" x1="210" y1="512" x2="814" y2="512" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7BEAF6"/>
+      <stop offset="0.5" stop-color="#E8FFFF"/>
+      <stop offset="1" stop-color="#73DBFF"/>
+    </linearGradient>
+    <filter id="softGlow" x="112" y="112" width="800" height="800" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="40"/>
+    </filter>
+    <filter id="waveGlow" x="136" y="324" width="752" height="376" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+  </defs>
+
+  <rect x="72" y="72" width="880" height="880" rx="208" fill="url(#bg)"/>
+  <rect x="72" y="72" width="880" height="880" rx="208" stroke="rgba(120, 138, 200, 0.22)"/>
+  <rect x="102" y="102" width="820" height="820" rx="178" stroke="rgba(154, 241, 247, 0.08)"/>
+
+  <g clip-path="url(#frameClip)">
+    <circle cx="512" cy="470" r="286" fill="url(#aura)"/>
+    <circle cx="782" cy="212" r="228" fill="url(#cornerGlow)"/>
+
+    <g filter="url(#softGlow)" opacity="0.72">
+      <rect x="286" y="404" width="86" height="216" rx="43" fill="#2DC8BE"/>
+      <rect x="396" y="336" width="86" height="352" rx="43" fill="#42DCD2"/>
+      <rect x="506" y="246" width="86" height="532" rx="43" fill="#8BF7FF"/>
+      <rect x="616" y="336" width="86" height="352" rx="43" fill="#42DCD2"/>
+      <rect x="726" y="404" width="86" height="216" rx="43" fill="#2DC8BE"/>
+    </g>
+
+    <g fill="url(#barFill)">
+      <rect x="286" y="404" width="86" height="216" rx="43"/>
+      <rect x="396" y="336" width="86" height="352" rx="43"/>
+      <rect x="506" y="246" width="86" height="532" rx="43"/>
+      <rect x="616" y="336" width="86" height="352" rx="43"/>
+      <rect x="726" y="404" width="86" height="216" rx="43"/>
+    </g>
+
+    <g opacity="0.86">
+      <path d="M236 530C288 530 338 445 406 445C478 445 500 594 570 594C636 594 684 432 742 432C776 432 801 452 824 468" stroke="#4FE6FF" stroke-linecap="round" stroke-width="38" filter="url(#waveGlow)"/>
+      <path d="M236 530C288 530 338 445 406 445C478 445 500 594 570 594C636 594 684 432 742 432C776 432 801 452 824 468" stroke="url(#waveStroke)" stroke-linecap="round" stroke-width="18"/>
+    </g>
+  </g>
+</svg>
